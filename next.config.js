@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  swcMinify: false,
   webpack: (config, { webpack }) => {
     // SVG loader
     config.module.rules.push({
