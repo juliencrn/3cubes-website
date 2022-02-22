@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-black relative;
+    /* @apply bg-yellow-50; */
+    @apply bg-amber-50;
+    /* @apply bg-orange-50; */
+  }
+
+  p {
+    @apply tracking-normal leading-tight;
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .headroom {
+    @apply bg-transparent w-full shadow-lg z-50;
+  }
+
+  .headroom-bg::before {
+    @apply bg-amber-50 h-full w-full absolute overflow-hidden;
+    transform: scale(1.2);
+    filter: blur(8px) opacity(80%);
+    content: "";
+    z-index: -1;
+  }
+
+  .title {
+    @apply font-sans font-bold tracking-tight;
+  }
+
+  .subtitle {
+    @apply font-sans font-medium tracking-tight;
+  }
+
+  .h1 {
+    @apply text-5xl sm:text-6xl lg:text-7xl;
+  }
+
+  .h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  .h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .h4 {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .h5 {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 4rem rgb(192 219 255 / 30%), 0 0 1rem rgb(167 139 250 / 30%);
+  }
+
+  .bg-solana {
+    background: linear-gradient(270deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%)
+  }
+
+  .text-solana {
+    background: -webkit-linear-gradient(0deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .home {
+
+  }
+}
+
+@layer utilities {}
+
+
+
+
+
+
+
+
+/* *::-webkit-scrollbar {
+  display: none;
+} */
+
+.bg-base {
+  @apply relative overflow-hidden bg-transparent;
+}
+
+.bg-base::before {
+  @apply h-full w-full absolute overflow-hidden;
+  content: "";
+  background-size: cover;
+  z-index: -1;
+  transform: scale(1.1);
+}
+
+.bg-blur {
+  @apply bg-base;
+}
+
+.bg-blur::before {
+  filter: blur(6px);
+}
+
+.bg-forest-1::before {
+  background-image: url(../assets/forest-1.jpeg);
+}
+.bg-forest-2::before {
+  background-image: url(../assets/forest-2.jpeg);
+}
+.bg-forest-3::before {
+  background-image: url(../assets/forest-3.jpeg);
+}
+
+.text-shadow {
+  text-shadow: 0 0 150px black;
+}
+
+
