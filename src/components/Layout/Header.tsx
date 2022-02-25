@@ -69,14 +69,14 @@ const Header = () => {
     <Headroom className="z-50">
       <div
         className={`headroom-bg relative  ${
-          showMobileMenu ? "bg-amber-50" : "overflow-hidden bg-transparent"
+          showMobileMenu ? "bg-white" : "overflow-hidden bg-transparent"
         }`}
       >
         <div
           ref={menuRef}
           className={`${
             showMobileMenu ? "flex-wrap" : ""
-          } w-full max-w-5xl mx-auto flex justify-between px-6 relative`}
+          } container flex justify-between relative`}
         >
           <div className="h-20 flex">
             <Link href="/">
@@ -84,7 +84,7 @@ const Header = () => {
                 <span className="aspect-square w-12 h-12 relative overflow-hidden my-auto">
                   <Image src="/apple-touch-icon.png" layout="fill" alt="tree" />
                 </span>
-                <a className="h4 title my-auto pl-1 font-mono">{title}</a>
+                <a className="h5 title my-auto pl-1 font-mono">{title}</a>
               </>
             </Link>
           </div>
@@ -106,7 +106,7 @@ const Header = () => {
           >
             <div ref={ref}>
               {showMobileMenu && (
-                <ul className={cn(menuClasses, "px-6 py-2  bg-amber-50")}>
+                <ul className={cn(menuClasses, "px-6 py-2  bg-white")}>
                   <Menu />
                 </ul>
               )}
@@ -122,7 +122,7 @@ export default Header;
 
 const Menu = () => (
   <>
-    {["how-it-works", "rewards", "roadmap"].map((name) => (
+    {["how-it-works", "rewards", "roadmap", "faq"].map((name) => (
       <AnchorLink key={name} name={name} />
     ))}
   </>

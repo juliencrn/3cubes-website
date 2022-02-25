@@ -1,6 +1,6 @@
 export const isDev = process.env.NODE_ENV === "development";
 
-export const title = "3Cubes NFT";
+export const title = "CarbonSeeds";
 export const description =
   "Get rewarded from the CO2 absorption of your future tree.";
 

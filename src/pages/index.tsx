@@ -5,44 +5,66 @@ import RewardSection from "../components/Home/RewardSection";
 import FaqSection from "../components/Home/FaqSection";
 import QuoteSection from "../components/Home/QuoteSection";
 import ListSection from "../components/ListSection";
+import { title } from "../config";
+import PartnersSection from "../components/Home/PatnersSection";
 
 const Home: NextPage = () => {
   return (
     <>
       <HomeHero />
-      <QuoteSection />
+      <QuoteSection>
+        {title} aims to reduce global greenhouse emissions by creating and
+        investing in sustainable reforestation programs.
+      </QuoteSection>
       <ListSection
         title="How it works"
         sectionId="how-it-works"
         steps={[
           {
             title: "1. Own a tree",
-            content: "You can buy an NFT that represents some tree quantity.",
+            content: "You can buy an NFT that represents a tree quantity.",
           },
           {
             title: "2. Seed in planted",
             content: "The trees are planted by our partners, world wide.",
           },
           {
-            title: "3. Collect Carbon Credits",
+            title: "3. Collect Token Carbon Credit",
             content:
               "CO2 absorbed by trees will be measured and verified to become exchangeable Carbon Credit.",
           },
           {
             title: "4. Reward nature holder",
             content:
-              "Carbons credit are retired from the market by locked-in on the blockchain to be redistributed.",
+              "Carbons credit are retired from the market by locked-in on the blockchain to be redistributed or can be sold on our website.",
           },
         ]}
       />
-
       <RewardSection>
-        <p>Rewards are directly correlated on the growth curve.</p>
         <p>
-          On a period of 5 years, the return on investment can pay off. With a
-          current market price of 10$ per carbon credit.
+          Profits generated from the C02 absorption will be distributed to the
+          NFT holders in our coin. The amount eligible will be calculated* based
+          on the amount of CO2 a tree has absorbed a year.
+        </p>
+        <p className="mt-4 lg:mt-8 text-sm">
+          *Calculated proportionally based on the tree growth curve (its age)
+          and the holden quantity.
         </p>
       </RewardSection>
+
+      <QuoteSection>
+        We believe in sustainable value creation by being the most transparent
+        as possible. Our current measures are partnerships with certified
+        organizations to audit and verify our work.
+      </QuoteSection>
+
+      <PartnersSection />
+
+      <QuoteSection>
+        Use the <span className="text-solana">Solana</span> blockchain
+        technology to keep track and share with all the stakeholders the current
+        view of the project at every moment.
+      </QuoteSection>
 
       <ListSection
         title="Roadmap"
@@ -77,20 +99,20 @@ const Home: NextPage = () => {
             ),
           },
           {
-            title: "2023",
+            title: "S1 - 2023",
             content: (
               <ul className="ml-6 list-disc">
-                <li>Launch an algae NFT non-limited supply</li>
                 <li>Creation of our TCO2 backed token</li>
                 <li>Creation of our utility token for rewards</li>
               </ul>
             ),
           },
           {
-            title: "2024",
+            title: "S2 - 2023",
             content: (
               <ul className="ml-6 list-disc">
                 <li>Launch a staking service to increase yield</li>
+                <li>Launch an algae NFT non-limited supply</li>
               </ul>
             ),
           },
@@ -101,6 +123,28 @@ const Home: NextPage = () => {
         questions={[
           {
             question: "What is the mint price?",
+            response: (
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                officiis et, ipsam nulla nisi atque quam excepturi fugit
+                provident. Non eligendi voluptatibus odio inventore, nobis ipsa
+                iusto earum sed adipisci?
+              </p>
+            ),
+          },
+          {
+            question: "Where do we plant?",
+            response: (
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                officiis et, ipsam nulla nisi atque quam excepturi fugit
+                provident. Non eligendi voluptatibus odio inventore, nobis ipsa
+                iusto earum sed adipisci?
+              </p>
+            ),
+          },
+          {
+            question: "How is verified the CO2 absorption?",
             response: (
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic

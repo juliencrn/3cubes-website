@@ -29,7 +29,7 @@ const Collapse = ({ open, title, content }: PropTypes) => {
     <article className="my-6 md:my-12">
       <h3
         onClick={toggleOpen}
-        className="h3 cursor-pointer  mb-2 flex justify-between"
+        className="h3 text-black cursor-pointer mb-2 flex justify-between"
       >
         {title}
         <span
