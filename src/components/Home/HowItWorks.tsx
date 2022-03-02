@@ -1,4 +1,5 @@
 import cn from "classnames";
+import AnimeOnAppear from "../AnimOnAppear";
 
 interface Step {
   title: string;
@@ -16,11 +17,15 @@ const HowItWorks = ({ title, sectionId, steps }: PropTypes) => (
     <TopWave />
     <div className="bg-emerald-100 my-16 pt-8 md:my-24 lg:my-48">
       <div className="container">
-        <h2 className="h2 title mb-4 md:mb-8">{title}</h2>
+        <AnimeOnAppear>
+          <h2 className="h2 title mb-4 md:mb-8">{title}</h2>
+        </AnimeOnAppear>
 
         <div className="max-w-3xl mx-auto">
           {steps.map((step, index) => (
-            <StepItem key={index} numero={index + 1} {...step} />
+            <AnimeOnAppear key={index}>
+              <StepItem numero={index + 1} {...step} />
+            </AnimeOnAppear>
           ))}
         </div>
       </div>

@@ -1,10 +1,11 @@
 import { FC, useEffect } from "react";
 import { useScript } from "usehooks-ts";
+import AnimeOnAppear from "../AnimOnAppear";
 
 const MarketSection: FC = ({}) => (
   <section id="market" className="py-8  my-12 md:my-24">
     <div className="container my-4">
-      <div className="flex flex-wrap pt-16 bg-green-variant rounded-3xl">
+      <AnimeOnAppear className="flex flex-wrap pt-16 bg-green-variant rounded-3xl">
         <div className="p-4 md:p-8 sm:p-12 xl:p-16 w-full md:w-1/2 flex flex-col justify-center py-6">
           <h2 className="h2 mb-4 title">Market outlook</h2>
           <div className="h5 mb-4 subtitle gap-2 grid">
@@ -16,16 +17,19 @@ const MarketSection: FC = ({}) => (
         </div>
 
         <div className="md:pl-8 w-full md:w-1/2 mt-auto pt-12 overflow-hidden">
-          <div className="shadow-2xl flex relative">
+          <AnimeOnAppear
+            direction="bottom"
+            className="shadow-2xl flex relative"
+          >
             <div className="md:rounded-tl-3xl w-full py-8 px-6 bg-white">
               <Chart />
             </div>
             <code className="text-right text-sm text-mono absolute -top-8 right-4 md:right-8">
               European Union ETS futures contract.
             </code>
-          </div>
+          </AnimeOnAppear>
         </div>
-      </div>
+      </AnimeOnAppear>
     </div>
   </section>
 );

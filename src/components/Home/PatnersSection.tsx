@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimeOnAppear from "../AnimOnAppear";
 
 interface PartnerProps {
   name: string;
@@ -50,7 +51,7 @@ export default function PartnersSection() {
 function Partner(props: PartnerProps) {
   return (
     <div className="w-1/2 sm:w-1/3 p-4 xl:px-8 flex">
-      <div className="my-auto">
+      <AnimeOnAppear className="my-auto">
         <span>
           <Image
             src={props.src}
@@ -58,7 +59,7 @@ function Partner(props: PartnerProps) {
             className="border-2 border-green-300"
           />
         </span>
-      </div>
+      </AnimeOnAppear>
     </div>
   );
 }

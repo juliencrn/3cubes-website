@@ -1,3 +1,5 @@
+import AnimeOnAppear from "./AnimOnAppear";
+
 interface Step {
   title: string;
   content: string | JSX.Element;
@@ -12,9 +14,13 @@ interface PropTypes {
 const ListSection = ({ title, sectionId, steps }: PropTypes) => (
   <section id={sectionId} className="bg-green-variant-circle">
     <div className="container max-w-3xl py-16 md:py-28 ">
-      <h2 className="h2 title mb-4 md:mb-8">{title}</h2>
+      <AnimeOnAppear>
+        <h2 className="h2 title mb-4 md:mb-8">{title}</h2>
+      </AnimeOnAppear>
       {steps.map((step, index) => (
-        <StepItem key={index} numero={index + 1} {...step} />
+        <AnimeOnAppear key={index}>
+          <StepItem numero={index + 1} {...step} />
+        </AnimeOnAppear>
       ))}
     </div>
   </section>
