@@ -1,45 +1,59 @@
 import type { NextPage } from "next";
 
+import { title } from "../config";
 import HomeHero from "../components/Home/HomeHero";
 import RewardSection from "../components/Home/RewardSection";
 import FaqSection from "../components/Home/FaqSection";
 import QuoteSection from "../components/Home/QuoteSection";
 import ListSection from "../components/ListSection";
-import { title } from "../config";
 import PartnersSection from "../components/Home/PatnersSection";
+import HowItWorks from "../components/Home/HowItWorks";
+import Separator from "../components/Separator";
+import MarketSection from "../components/Home/MarketSection";
 
 const Home: NextPage = () => {
   return (
     <>
       <HomeHero />
+
+      <Separator />
+
       <QuoteSection>
         {title} aims to reduce global greenhouse emissions by creating and
         investing in sustainable reforestation programs.
       </QuoteSection>
-      <ListSection
-        title="How it works"
+
+      <HowItWorks
+        title="Mechanism."
         sectionId="how-it-works"
         steps={[
           {
-            title: "1. Own a tree",
+            title: "Own a tree",
             content: "You can buy an NFT that represents a tree quantity.",
           },
           {
-            title: "2. Seed in planted",
+            title: "Seed in planted",
             content: "The trees are planted by our partners, world wide.",
           },
           {
-            title: "3. Collect Token Carbon Credit",
+            title: "Collect Token Carbon Credit",
             content:
               "CO2 absorbed by trees will be measured and verified to become exchangeable Carbon Credit.",
           },
           {
-            title: "4. Reward nature holder",
+            title: "Reward nature holder",
             content:
               "Carbons credit are retired from the market by locked-in on the blockchain to be redistributed or can be sold on our website.",
           },
         ]}
       />
+
+      <QuoteSection>
+        Use the <span className="text-solana">Solana</span> blockchain
+        technology to keep track and share with all the stakeholders the current
+        view of the project at every moment.
+      </QuoteSection>
+
       <RewardSection>
         <p>
           Profits generated from the C02 absorption will be distributed to the
@@ -52,19 +66,7 @@ const Home: NextPage = () => {
         </p>
       </RewardSection>
 
-      <QuoteSection>
-        We believe in sustainable value creation by being the most transparent
-        as possible. Our current measures are partnerships with certified
-        organizations to audit and verify our work.
-      </QuoteSection>
-
-      <PartnersSection />
-
-      <QuoteSection>
-        Use the <span className="text-solana">Solana</span> blockchain
-        technology to keep track and share with all the stakeholders the current
-        view of the project at every moment.
-      </QuoteSection>
+      <MarketSection />
 
       <ListSection
         title="Roadmap"
@@ -118,6 +120,14 @@ const Home: NextPage = () => {
           },
         ]}
       />
+
+      <QuoteSection>
+        We believe in sustainable value creation by being the most transparent
+        as possible. Our current measures are partnerships with certified
+        organizations to audit and verify our work.
+      </QuoteSection>
+
+      <PartnersSection />
 
       <FaqSection
         questions={[

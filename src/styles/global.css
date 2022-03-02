@@ -70,6 +70,10 @@
     text-shadow: 0 0 4rem rgb(192 219 255 / 30%), 0 0 1rem rgb(167 139 250 / 30%);
   }
 
+  .text-shadow {
+    text-shadow: 0 0 150px black;
+  }
+
   :root {
     --solana-green: rgb(20, 241, 149);
     --solana-green-light: rgba(20, 241, 149, 0.2);
@@ -143,6 +147,20 @@
 .bg-forest-4::before {
   background-image: url(../assets/backgrounds/forest-4.jpeg);
 }
+.bg-destroyed-forest::before {
+  background-image: url(../assets/backgrounds/destroyed-forest.jpeg);
+  filter: grayscale(75%)
+}
 
+.cube-anim {
+  animation: Cube-spin infinite 30s linear;
+}
 
-
+@keyframes Cube-spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

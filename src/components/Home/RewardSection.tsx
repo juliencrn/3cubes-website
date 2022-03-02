@@ -3,8 +3,8 @@ import { FC } from "react";
 import chart from "../../assets/charts/yield-trees.jpeg";
 
 const RewardSection: FC = ({ children }) => (
-  <section id="rewards" className="py-8">
-    <div className="container my-12 md:my-24">
+  <section id="rewards" className="py-8 my-12 md:my-24">
+    <div className="container my-4">
       <div className="flex flex-wrap pt-16 bg-green-variant rounded-3xl">
         <div className="p-4 md:p-8 sm:p-12 xl:p-16 w-full md:w-1/2 flex flex-col justify-center py-6">
           <h2 className="h2 mb-4 title">Rewards</h2>
